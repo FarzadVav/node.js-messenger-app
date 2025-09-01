@@ -4,13 +4,15 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "tsc",
-    "dev": "node --env-file=.env ./dist/app.js"
+    "dev": "tsx watch --env-file=.env ./src/app.ts",
+    "build": "rm -rf dist && tsc",
+    "start": "node --env-file=.env ./dist/app.js"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
     "@types/node": "^24.3.0",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "tsx": "^4.20.5"
   },
   "dependencies": {
     "express": "^5.1.0"
