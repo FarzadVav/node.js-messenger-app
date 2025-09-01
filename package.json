@@ -1,0 +1,13 @@
+{
+  "name": "node.js-chat-app",
+  "author": "FarzadVav",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "typescript": "^5.9.2"
+  }
+}
