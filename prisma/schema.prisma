@@ -8,6 +8,16 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum MemberRole {
+  OWNER
+  MEMBER
+}
+
+enum MessageType {
+  TEXT
+  FILE
+}
+
 model User {
   id            String    @id @default(cuid())
   email         String    @unique
@@ -77,17 +87,4 @@ model Message {
   replies   Message[] @relation("MessageReply")
 
   @@map("messages")
-}
-
-enum MemberRole {
-  OWNER
-  ADMIN
-  MEMBER
-}
-
-enum MessageType {
-  TEXT
-  IMAGE
-  FILE
-  SYSTEM
 }
